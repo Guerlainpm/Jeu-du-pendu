@@ -4,6 +4,7 @@
 }
 
 body {
+  background: rgb(255, 180, 149);
   font-family: 'Comfortaa', cursive;
   width: 100%;
   height: 100vh;
@@ -33,7 +34,7 @@ body {
       margin-bottom: 20px;
       border-radius: 5px;
       border: solid 1px rgb(207, 207, 207);
-      outline-color: rgb(240, 142, 76);
+      outline-color: rgb(116, 130, 255);
       @media screen and (max-width: 550px){
         width: 80%;
           font-size: 20px;
@@ -44,14 +45,14 @@ body {
     }
 
     input[type="submit"] {
-      background: rgb(240, 142, 76);
+      background: rgb(116, 130, 255);
       border-radius: 5px;
       border: solid 1px rgb(207, 207, 207);
       padding: 10px 25px;
       &:hover{
         background: rgb(236, 236, 236);
-        color: rgb(240, 142, 76);
-        border: solid 1px rgb(240, 142, 76);
+        color: rgb(116, 130, 255);
+        border: solid 1px rgb(116, 130, 255);
       }
     }
     display: flex;
@@ -63,6 +64,7 @@ body {
     flex-direction: column;
     align-items: center;
     #searchWord{
+      letter-spacing: 7px;
       display: none;
       justify-content: space-around;
       margin-bottom: 35px;
@@ -75,19 +77,27 @@ body {
       }
     }
     #buttons{
+      font-family: 'Comfortaa', cursive;
       display: none;
       justify-content: center;
       width: 60%;
       flex-wrap: wrap;
       button{
+        color: rgb(255, 255, 255);
         padding: 10px 15px;
-        background-color: rgb(240, 142, 76);
+        background-color: rgb(116, 130, 255);
         border: solid 1px rgb(207, 207, 207);
         &:hover{
           background: rgb(236, 236, 236);
-          color: rgb(240, 142, 76);
-          border: solid 1px rgb(240, 142, 76);
+          color: rgb(116, 130, 255);
+          border: solid 1px rgb(116, 130, 255);
         }
+      }
+      @media screen and (max-width: 1199px){
+          width: 30%;
+      }
+      @media screen and (min-width: 550px){
+          width: 60%;
       }
     }
     #error{
@@ -101,7 +111,8 @@ body {
         background-color: rgb(182, 143, 5);
       }
       #errorLeft{
-        color: rgb(24, 173, 6);
+        display: flex;
+        color: rgb(15, 133, 1);
       }
       @media screen and (max-width: 1199px){
         padding: 20px 30px;

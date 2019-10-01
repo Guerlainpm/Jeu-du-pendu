@@ -1,12 +1,19 @@
+var wordToFind;
+var hiddenWord;
+
 document.getElementById("chooseWord").addEventListener("click", function(event) {
-  var inputValue = document.getElementById("inputValue").value.toUpperCase();
+  wordToFind = document.getElementById("inputValue").value.toUpperCase();
+  hiddenWord = "_".repeat(wordToFind.length);
   event.preventDefault();
-  console.log(inputValue);
+  console.log(wordToFind);
   document.getElementById("title").innerHTML = "A toi de trouver !";
   document.getElementsByTagName("form")[0].style.display = "none";
   document.getElementById("searchWord").style.display = "flex";
   document.getElementById("error").style.display = "block";
   document.getElementById("buttons").style.display = "flex";
+  document.getElementById("searchWord").innerHTML = hiddenWord;
+  document.getElementById("numberErrorLeft").innerHTML = 10;
+
   buttonGenerator();
 });
 
@@ -18,10 +25,10 @@ function buttonGenerator() {
     createButton.appendChild(document.createTextNode(letter));
     document.getElementById("buttons").appendChild(createButton);
     createButton.addEventListener("click", event => {
-      console.log(event.target.innerText);
+      checkAndReplace(event.target.innerText);
+
     })
   })
-
   // for (letter of alphabet) {
   //   var createButton = document.createElement("button");
   //   var t = document.createTextNode(letter);
@@ -35,4 +42,21 @@ function buttonGenerator() {
   //   createButton.appendChild(t);
   //   document.getElementById("buttons").appendChild(createButton);
   // }
+}
+
+function checkAndReplace(letter) {
+  var splitHidden = hiddenWord.split("");
+  var erreursRestante = 10;
+  for (var i = 0; i <= wordToFind.length; i++) {
+    if (wordToFind[i] == letter) {
+      splitHidden[i] = letter;
+    }
+    else if (wordToFind[i] != letter) {
+      erreursRestante -= 1;
+      console.log(erreursRestante);
+    }
+  }
+  hiddenWord = splitHidden.join("");
+  document.getElementById("searchWord").innerHTML = hiddenWord;
+  document.getElementById("numberErrorLeft").innerHTML = erreursRestante;
 }
