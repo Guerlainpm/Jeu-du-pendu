@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../build/style.min.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+  <title>jeu-du-pendu</title>
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Inserer le mot a chercher</h1>
+  </header>
+  <form>
+    <input type="text" name="" value="" placeholder="Entrer le mot a chercher" id="inputValue">
+    <input type="submit" name="" value="Valider" id="chooseWord">
+  </form>
+  <section>
+    <div id="searchWord">
+    </div>
+    <div id="buttons">
+    </div>
+    <div id="error">
+      <div id="errorMade">
+        <p>Erreurs faites :</p>
+        <p id="numberErrorMade"></p>
+      </div>
+      <div id="errorLeft">
+        <p>Erreurs restantes :</p>
+        <p id="numberErrorLeft"></p>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="index.js" charset="utf-8"></script>
+</html>
