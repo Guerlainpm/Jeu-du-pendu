@@ -35,12 +35,11 @@ body {
       border-radius: 5px;
       border: solid 1px rgb(207, 207, 207);
       outline-color: rgb(116, 130, 255);
-      @media screen and (max-width: 550px){
+      @media screen and (max-width: 550px) {
         width: 80%;
-          font-size: 20px;
       }
-      @media screen and (max-width: 1199px){
-          font-size: 20px;
+      @media screen and (max-width: 1199px) {
+        font-size: 20px;
       }
     }
 
@@ -49,7 +48,8 @@ body {
       border-radius: 5px;
       border: solid 1px rgb(207, 207, 207);
       padding: 10px 25px;
-      &:hover{
+
+      &:hover {
         background: rgb(236, 236, 236);
         color: rgb(116, 130, 255);
         border: solid 1px rgb(116, 130, 255);
@@ -59,16 +59,42 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  section{
+
+  #result{
+    color: rgb(65, 65, 65);
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+    #reload {
+      background: rgb(116, 130, 255);
+      border-radius: 5px;
+      border: solid 1px rgb(207, 207, 207);
+      padding: 10px 25px;
+      display: none;
+      margin: 20px 0px;
+      &:hover {
+        background: rgb(236, 236, 236);
+        color: rgb(116, 130, 255);
+        border: solid 1px rgb(116, 130, 255);
+      }
+    }
+
+  section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    #searchWord{
+
+    #searchWord {
       letter-spacing: 7px;
+      font-size: 25px;
+      font-weight: 100;
       display: none;
       justify-content: space-around;
       margin-bottom: 35px;
-      .searchLetter{
+
+      .searchLetter {
         text-align: center;
         min-width: 15px;
         margin-left: 5px;
@@ -76,45 +102,61 @@ body {
         border-bottom: solid 1px rgb(60, 60, 60);
       }
     }
-    #buttons{
+
+    #buttons {
       font-family: 'Comfortaa', cursive;
       display: none;
       justify-content: center;
       width: 60%;
       flex-wrap: wrap;
-      button{
+
+      button {
         color: rgb(255, 255, 255);
         padding: 10px 15px;
         background-color: rgb(116, 130, 255);
-        border: solid 1px rgb(207, 207, 207);
-        &:hover{
+        border: solid 1px rgb(236, 236, 236);
+
+        &:hover {
           background: rgb(236, 236, 236);
           color: rgb(116, 130, 255);
-          border: solid 1px rgb(116, 130, 255);
         }
       }
-      @media screen and (max-width: 1199px){
-          width: 30%;
+      @media screen and (min-width: 1190px) {
+        width: 40%;
+
+        button {
+          font-size: 20px;
+        }
       }
-      @media screen and (min-width: 550px){
-          width: 60%;
+      @media screen and (max-width: 550px) {
+        width: 80%;
       }
     }
-    #error{
+
+    #error {
       width: 100vw;
       padding: 20px 50px;
       display: none;
-      #errorMade{
-        color: rgb(255, 8, 0);
-      }
-      .falseLetters{
+
+
+      .falseLetters {
         background-color: rgb(182, 143, 5);
+        border: solid 1px rgb(182, 143, 5);
+        color: rgb(236, 236, 236);
       }
-      #errorLeft{
+
+      .rightLetter {
+        background: rgb(15, 133, 1);
+        border: solid 1px rgb(15, 133, 1);
+        color: rgb(236, 236, 236);
+      }
+
+      #errorLeft {
         display: flex;
+        font-size: 20px;
         color: rgb(15, 133, 1);
       }
-      @media screen and (max-width: 1199px){
+      @media screen and (max-width: 1199px) {
         padding: 20px 30px;
       }
     }

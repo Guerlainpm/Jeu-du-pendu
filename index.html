@@ -14,25 +14,26 @@
     <h1 id="title">Inserer le mot a chercher</h1>
   </header>
   <form>
-    <input type="text" name="" value="" placeholder="Entrer le mot a chercher" id="inputValue">
+    <input type="text" name="" value="" placeholder="Entrer le mot a chercher" id="inputValue" onkeypress="return blockSpecialChar(event)">
     <input type="submit" name="" value="Valider" id="chooseWord">
   </form>
+  <div id="result">
+  </div>
   <section>
     <div id="searchWord">
     </div>
+
     <div id="buttons">
     </div>
+    <button value="Refresh Page" onClick="window.location.reload();" id="reload">Recommencé</button>
     <div id="error">
-      <div id="errorMade">
-        <p>Erreurs faites :</p>
-        <p id="numberErrorMade"></p>
-      </div>
       <div id="errorLeft">
-        <p>Erreurs restantes :</p>
+        <p>Erreurs restantes : </p>
         <p id="numberErrorLeft"></p>
       </div>
     </div>
   </section>
 </body>
 <script src="index.js" charset="utf-8"></script>
+
 </html>
