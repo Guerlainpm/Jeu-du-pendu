@@ -38,7 +38,9 @@ body {
       border: solid 1px rgb(207, 207, 207);
       outline-color: rgb(116, 130, 255);
       @media screen and (max-width: 550px) {
-        width: 80%;
+        width: 90%;
+        font-size: 15px !important;
+        padding: 10px 15px;
       }
       @media screen and (max-width: 1199px) {
         font-size: 20px;
@@ -62,7 +64,7 @@ body {
     align-items: center;
   }
 
-  #result{
+  #result ,#resultPoints{
     color: rgb(65, 65, 65);
     font-size: 25px;
     text-align: center;
@@ -131,7 +133,7 @@ body {
         width: 40%;
       }
       @media screen and (max-width: 550px) {
-        width: 80%;
+        width: 90%;
         button {
           font-size: 20px;
         }
@@ -147,6 +149,9 @@ body {
         display: flex;
         font-size: 20px;
         color: rgb(22, 172, 4);
+        @media screen and (max-width: 1199px) {
+          justify-content: center;
+        }
       }
       @media screen and (max-width: 1199px) {
         padding: 20px 30px;

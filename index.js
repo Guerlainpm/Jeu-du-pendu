@@ -78,6 +78,8 @@ function checkAndReplace(letter) {
     document.getElementById("buttons").style.display = "none";
     document.getElementById("buttonChiffre").style.display = "none";
     document.getElementById("title").innerHTML = "Tu a trouver le mot " + '"' + wordToFind + '"' + " ." + "Bien jouer";
+    document.getElementById("resultPoints").style.display = "block";
+    document.getElementById("resultPoints").innerHTML = "Tu as ";
   }
   if (erreursRestante == 0) {
     document.getElementById("searchWord").style.display = "none";
@@ -86,6 +88,9 @@ function checkAndReplace(letter) {
     document.getElementById("title").innerHTML = "Tu as utiliser tout tes essaies. Tu as perdu !";
     document.getElementById("reload").style.display = "block";
     document.getElementById("result").innerHTML = "Le mot à trouver était : " + wordToFind;
+    document.getElementById("resultPoints").style.display = "block";
+    document.getElementById("resultPoints").innerHTML = "Tu as ";
+
   } else if (!wordToFind.includes(letter)) {
     erreursRestante--;
     event.target.style.backgroundColor = "rgb(255, 78, 66)";
@@ -93,6 +98,7 @@ function checkAndReplace(letter) {
   hiddenWord = splitHidden.join("");
   document.getElementById("searchWord").innerHTML = hiddenWord;
   document.getElementById("numberErrorLeft").innerHTML = erreursRestante;
+
   event.target.disabled = true;
 }
 
@@ -101,5 +107,17 @@ function blockSpecialChar(e) {
   var k = e.keyCode;
   return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || (k >= 48 && k <= 57) || k == 97);
 }
+
+function points() {
+  console.log("gg");
+}
+
+
+
+
+
+
+
+
 
 //
