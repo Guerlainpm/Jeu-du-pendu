@@ -24,6 +24,7 @@ body {
   }
 
   form {
+    display: none;
     width: 100%;
     .placeholderColor::-webkit-input-placeholder {
     color: rgba(177, 32, 5, 0.73);
@@ -59,9 +60,6 @@ body {
         border: solid 1px rgb(116, 130, 255);
       }
     }
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   #result ,#resultPoints{
@@ -70,7 +68,53 @@ body {
     text-align: center;
     margin-bottom: 25px;
   }
+  #buttons ,#buttonChiffre{
+    display: none;
+  }
+  #chooseModeContainer{
+    display:flex;
+    justify-content: space-around;
+    width: 25%;
+    #soloButton, #coopButton{
+      width: auto;
+      button{
+        max-width: 100px;
+        min-width: 100px;
+        border-radius: 5px;
+      }
+    }
+  }
 
+  #buttons ,#buttonChiffre, #soloButton, #coopButton{
+    font-family: 'Comfortaa', cursive;
+    justify-content: center;
+    width: 60%;
+    flex-wrap: wrap;
+
+    button {
+      color: rgb(255, 255, 255);
+      padding: 10px 15px;
+      background-color: rgb(116, 130, 255);
+      border: solid 1px rgb(236, 236, 236);
+
+      &:hover {
+        background: rgb(236, 236, 236);
+        color: rgb(116, 130, 255);
+      }
+      &:disabled{
+        color: rgb(236, 236, 236);
+      }
+    }
+    @media screen and (min-width: 1190px) {
+      width: 40%;
+    }
+    @media screen and (max-width: 550px) {
+      width: 90%;
+      button {
+        font-size: 20px;
+      }
+    }
+  }
     #reload {
       color: rgb(236, 236, 236);
       background: rgb(116, 130, 255);
@@ -108,37 +152,6 @@ body {
       }
     }
 
-    #buttons ,#buttonChiffre{
-      font-family: 'Comfortaa', cursive;
-      display: none;
-      justify-content: center;
-      width: 60%;
-      flex-wrap: wrap;
-
-      button {
-        color: rgb(255, 255, 255);
-        padding: 10px 15px;
-        background-color: rgb(116, 130, 255);
-        border: solid 1px rgb(236, 236, 236);
-
-        &:hover {
-          background: rgb(236, 236, 236);
-          color: rgb(116, 130, 255);
-        }
-        &:disabled{
-          color: rgb(236, 236, 236);
-        }
-      }
-      @media screen and (min-width: 1190px) {
-        width: 40%;
-      }
-      @media screen and (max-width: 550px) {
-        width: 90%;
-        button {
-          font-size: 20px;
-        }
-      }
-    }
 
     #error {
       width: 100vw;

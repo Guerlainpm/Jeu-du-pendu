@@ -11,9 +11,17 @@
 
 <body>
   <header>
-    <h1 id="title">Inserer le mot a chercher</h1>
+    <h1 id="title">Mode de jeu</h1>
   </header>
-  <form>
+  <div id="chooseModeContainer">
+    <div id="soloButton">
+      <button type="button" name="button">1 VS IA</button>
+    </div>
+    <div id="coopButton">
+      <button type="button" name="button">1 VS 1</button>
+    </div>
+  </div>
+  <form id="form">
     <input type="text" name="" value="" placeholder="Entrer le mot a chercher (peut contenir des lettres)" id="inputValue" onkeypress="return blockSpecialChar(event)">
     <input type="submit" name="" value="Valider" id="chooseWord">
   </form>
