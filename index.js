@@ -73,23 +73,17 @@ function checkAndReplace(letter) {
     }
   }
 
-  if (!splitHidden.includes("_")) {
+  if (!splitHidden.includes("_") || erreursRestante == 0) {
     document.getElementById("searchWord").style.display = "none";
     document.getElementById("buttons").style.display = "none";
     document.getElementById("buttonChiffre").style.display = "none";
     document.getElementById("title").innerHTML = "Tu a trouver le mot " + '"' + wordToFind + '"' + " ." + "Bien jouer";
     document.getElementById("resultPoints").style.display = "block";
-    document.getElementById("resultPoints").innerHTML = "Tu as ";
+    // document.getElementById("resultPoints").innerHTML = "Tu as ";
   }
   if (erreursRestante == 0) {
-    document.getElementById("searchWord").style.display = "none";
-    document.getElementById("buttons").style.display = "none";
-    document.getElementById("buttonChiffre").style.display = "none";
     document.getElementById("title").innerHTML = "Tu as utiliser tout tes essaies. Tu as perdu !";
-    document.getElementById("reload").style.display = "block";
     document.getElementById("result").innerHTML = "Le mot à trouver était : " + wordToFind;
-    document.getElementById("resultPoints").style.display = "block";
-    document.getElementById("resultPoints").innerHTML = "Tu as ";
 
   } else if (!wordToFind.includes(letter)) {
     erreursRestante--;
