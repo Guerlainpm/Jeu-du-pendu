@@ -1,7 +1,7 @@
 var wordToFind;
 var hiddenWord;
 var erreursRestante = 10;
-var tab = ["poubelle", "vert","Articulation","Prisonnier","Tapisser", "Gong", "Fouet","Parapluie"];
+var tab = ["poubelle", "vert","Articulation","Prisonnier","Tapisser", "Gong", "Fouet","Parapluie","Armes","Ambulance","Sacrifice","Submersible","Prisonnier","Caravane","Canon","Ver","Invisible","Anneau","Effondrement","France"];
 
 //-----------------------------------------------
 document.getElementById("coopButton").addEventListener("click" , function(event){
