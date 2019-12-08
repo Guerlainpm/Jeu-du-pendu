@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../build/style.min.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+  <title>jeu-du-pendu</title>
+</head>
+
+<body>
+
+
+  <header>
+    <h1 id="title">Mode de jeu</h1>
+  </header>
+
+
+  <div id="chooseModeContainer">
+    <div id="soloButton">
+      <button type="button" name="button">1 VS IA</button>
+    </div>
+    <div id="coopButton">
+      <button type="button" name="button">1 VS 1</button>
+    </div>
+  </div>
+
+
+  <form id="form">
+    <input type="text" name="" value="" placeholder="Entrer le mot a chercher (peut contenir des lettres)" id="inputValue" onkeypress="return blockSpecialChar(event)">
+    <input type="submit" name="" value="Valider" id="chooseWord">
+  </form>
+
+
+  <div id="result">
+  </div>
+
+  <section>
+
+    <div id="searchWord"></div>
+
+    <div id="buttons"></div>
+
+    <div id="buttonChiffre"></div>
+
+    <div id="resultPoints"></div>
+
+    <button value="Refresh Page" onClick="window.location.reload();" id="reload">Recommencé</button>
+
+    <div id="error">
+
+      <div id="errorLeft">
+        <p>Erreurs restantes : </p>
+        <p id="numberErrorLeft"></p>
+      </div>
+
+    </div>
+
+  </section>
+</body>
+<script src="index.js" charset="utf-8"></script>
+
+</html>
